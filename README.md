@@ -1,91 +1,61 @@
-# Introduction to OptiPerformer
+# Introduction-to-Optiperformer
+
 
 ## Aim
-To download and install OptiPerformer software on the computer and run a sample file.
+Download and install OptiPerformer software on your computer and run a sample file.
 
----
+## Software required
+Optiwave introduces OptiPerformer, a free photonic design automation tool which harnesses the full power of OptiSystem and creates specific dynamic design scenarios which can be used by students.
 
-## Software Required
-
-Optiwave introduces **OptiPerformer**, a free photonic design automation tool that harnesses the capabilities of OptiSystem and creates dynamic design scenarios for students.
-
-The system is instrumented with:
-- An optical power meter at the input to the receiver (or the output of the fiber)
+The system is *instrumented* with:
+- An optical power meter at the input to the receiver (or the output of the fiber)  
 - A bit error rate (BER) analyzer
 
----
 
 ## Procedure
 
-1. Download and install OptiPerformer from the official website:  
-   https://optiwave.com
+1. Download and install OptiPerformer from the [optiwave.com](https://optiwave.com) website.
+2. Copy the `Introduction_OptiPerformer.osp` file to your PC.
+3. Start OptiPerformer.
+4. Use either the **File menu** or the **Open File** button to open the Fiber Optic System File.
+5. Study the layout, which includes text and boxes identifying the three components of the fiber optic system:
+   - **Transmitter section**: binary source (PRBS generator), electrical pulse generator, laser diode, external modulator  
+   - **Receiver section**: photodiode, low-pass filter, decision circuit (with BER analyzer)  
+   *(These components will be covered in more detail later in the course.)*
+6. Run the simulation by pressing the **Start** button.  
+   - Progress will be displayed.  
+   - The message *“Calculation Finished!”* will appear when complete.
+7. Double-click on the optical power meter and BER analyzer.  
+   - Move the windows as necessary for clarity.  
+   - In the BER window, check the box **Show Eye Diagram**.  
+   - The optical power meter shows power at the photodiode input in both watts and dBm.  
+   - The BER window displays the eye diagram and quantities including **Max Q Factor** and **Min BER**.
+8. The simulation runs **5 iterations**, with fiber length varying from 50 km to 150 km in 5 steps.  
+   - The index is displayed in the upper right corner of the layout.  
+   - Use the forward/reverse buttons in the lower left to step through iterations.  
+   - Note changes in received power and BER display (eye diagram, Q factor, BER) with fiber length.
 
-2. Copy the `Introduction_OptiPerformer.osp` file to the PC.
+## Tabulation:
+![IMG_8862](https://github.com/user-attachments/assets/c4b76639-5fe8-4b61-87e3-334389b54e56)
 
-3. Start the OptiPerformer software.
+## Graph:
 
-4. Open the fiber optic system file using either:
-   - The **File** menu, or  
-   - The **Open File** button
-
-5. Study the system layout, which consists of the following sections:
-
-   **Transmitter Section**
-   - Binary source (PRBS generator)
-   - Electrical pulse generator
-   - Laser diode
-   - External modulator
-
-   **Receiver Section**
-   - Photodiode
-   - Low-pass filter
-   - Decision circuit with BER analyzer
-
-   *(These components will be explained in detail later in the course.)*
-
-6. Run the simulation by clicking the **Start** button.
-   - Simulation progress will be displayed.
-   - The message **"Calculation Finished!"** appears after completion.
-
-7. Double-click the **Optical Power Meter** and **BER Analyzer**.
-   - Move the windows for better visibility.
-   - In the BER analyzer window, enable **Show Eye Diagram**.
-   - The optical power meter displays received power in watts and dBm.
-   - The BER analyzer displays the eye diagram, maximum Q factor, and minimum BER.
-
-8. The simulation runs for **5 iterations**, with fiber length varying from **50 km to 150 km**.
-   - The iteration index is displayed in the upper-right corner of the layout.
-   - Use the forward and reverse buttons to switch between iterations.
-   - Observe the changes in received power, eye diagram, Q factor, and BER.
-
----
-
-## Tabulation
-
-![WhatsApp Image 2026-01-29 at 9 46 11 PM](https://github.com/user-attachments/assets/18d8b03e-c4a9-4ba5-af63-18983d725334)
+<img width="1131" height="624" alt="image" src="https://github.com/user-attachments/assets/a84ffc64-3f9c-4e7f-968d-99a706582d36" />
 
 
----
+## Description:
+
+the eye diagram and corresponding Q-factor variation for an optical communication link operating at 2.5 Gb/s with a 193.1 THz laser.
+The eye diagram (left) illustrates signal integrity over multiple iterations, where the eye opening indicates timing margin and noise tolerance.
+Clear eye opening at the sampling instant suggests relatively low intersymbol interference and acceptable system performance.
+The Q-factor plot (right) shows how signal quality varies across the bit period, peaking near the optimal decision point.
+Higher Q values at mid-bit confirm improved signal-to-noise ratio and reliable data detection.
+
+## Result:
+
+The above experiment is executed and output is verified.
 
 
----
-
-## Graph
-
-<img width="1919" height="1072" alt="Screenshot 2026-01-29 213008" src="https://github.com/user-attachments/assets/78d340f5-e0c9-4ee5-b782-115b9f0c0f2c" />
 
 
----
 
-
-## Description
-
-As the fiber length increases, signal attenuation and dispersion cause the transmitted pulses to spread and distort. This spreading results in overlapping of adjacent symbols, reducing the eye opening in the eye diagram.
-
-A reduced eye opening indicates increased intersymbol interference, which raises the probability of bit errors. Consequently, the Q factor decreases and the BER increases, degrading the overall performance and reliability of the optical communication system.
-
----
-
-## Result
-
-Thus, the OptiPerformer software was successfully installed, and the given sample file was executed successfully.
